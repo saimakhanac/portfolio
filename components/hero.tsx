@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { ArrowDown, Mail, Phone, Calendar } from "lucide-react";
+import { ArrowDown, Mail, Phone, Calendar, } from "lucide-react";
 import Link from "next/link";
 const techstack = ["React", "TypeScript", "Next.js", "Tailwind"];
 const roles = [
@@ -67,8 +67,7 @@ export const Hero = () => {
     <>
       <section className="min-h-screen px-8 py-26 ">
         <div className="min-h-screen flex justify-evenly flex-col">
-
-          <div className="flex items-center gap-12">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12">
             {/* circle design  */}
             <div className="">
               <div className="relative overflow-hidden rounded-full border-4 border-primary w-56 h-56 shadow-lg">
@@ -97,18 +96,18 @@ export const Hero = () => {
 
             {/* Info */}
             <div>
-              <div className="text-7xl font-bold text-balance leading-tight">
+              <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight">
                 Saima Khan
               </div>
 
               <div
                 key={currentRole}
-                className={`text-2xl text-primary my-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+                className={` text-base md:text-xl lg:text-2xl text-primary my-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               >
                 {roles[currentRole]}
               </div>
 
-              <div className="border py-6 px-3 bg-card/40 shadow-lg rounded-xl my-3 text-balance">
+              <div className="text-sm  md:text-base border py-6 px-3 bg-card/40 shadow-lg rounded-xl my-3 text-balance">
                 I am a Frontend Engineer combining strong technical foundations
                 with a year of development experience. Specialized in
                 TypeScript, React, and Next.js, I bridge the gap between backend
@@ -129,7 +128,7 @@ export const Hero = () => {
                 ))}
               </div>
               {/* contact details */}
-              <div className="flex flex-wrap my-8 gap-4">
+              <div className="flex flex-wrap my-8 gap-2 sm:gap-4">
                 {details.map((info, index) => {
                   return (
                     <a
@@ -144,16 +143,16 @@ export const Hero = () => {
                 })}
               </div>
               {/* CTA button */}
-              <div className="flex gap-5">
+              <div className="flex gap-3 md:gap-5">
                 <Link
                   href="#work"
-                  className="border py-4 px-8 font-medium rounded-full animate-pulse-glow transition-all bg-primary text-primary-foreground"
+                  className=" whitespace-nowrap border flex flex-wrap items-center md:block  py-2 px-4 md:py-4 md:px-8 text-sm md:text-base font-medium rounded-full animate-pulse-glow transition-all bg-primary text-primary-foreground"
                 >
                   View my work
                 </Link>
                 <Link
                   href="#contact"
-                  className="border py-4 px-8  font-medium text- rounded-full transition-all hover:bg-secondary text-foreground"
+                  className="whitespace-nowrap border border-border flex flex-wrap items-center md:block  py-2 px-4 md:py-4 md:px-8 text-sm md:text-base font-medium text- rounded-full transition-all hover:bg-secondary text-foreground"
                 >
                   Let's Talk
                 </Link>
@@ -162,12 +161,11 @@ export const Hero = () => {
             {/* Info ends here */}
           </div>
           {/* Scroll down */}
-          <div className="flex justify-center animate-bounce">
+          <div className="mt-6 sm:mt-0  flex justify-center animate-bounce">
             <Link href="#about" className="">
               <ArrowDown size={30} />
             </Link>
           </div>
-
         </div>
 
         {/* Info Section ends here */}
