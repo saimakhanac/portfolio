@@ -161,8 +161,8 @@ export const Hero = () => {
             {/* Info ends here */}
           </div>
           {/* Scroll down */}
-          <div className="mt-6 sm:mt-0  flex justify-center animate-bounce">
-            <Link href="#about" className="">
+          <div className="mt-6 sm:mt-0 flex justify-center animate-bounce">
+            <Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">
               <ArrowDown size={30} />
             </Link>
           </div>
