@@ -38,7 +38,7 @@ export const Header = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hidden md:block text-sm font-semibold tracking-tight text-foreground transition-colors relative group"
+                className="hidden md:block text-sm mx-4 font-semibold tracking-tight text-foreground transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
