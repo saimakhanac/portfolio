@@ -55,7 +55,7 @@ const ContactUs = () => {
             className={`${isVisible ? "animate-slide-in-left delay-200" : "opacity-0"}`}
           >
             {/* head start */}
-            <div className="flex flex-col items-center">
+            <div className="lg:block flex flex-col items-center">
               {/* 1 */}
               <div className="text-2xl text-foreground font-bold">
                 Contact Info

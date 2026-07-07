@@ -26,8 +26,8 @@ const AboutMeSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about">
-      <div className="max-w-7xl mx-auto px-6 my-10">
+    <section ref={sectionRef} id="about" className="scroll-mt-24">
+      <div className="max-w-7xl mx-auto px-6 my-10 py-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* left */}
           <div
