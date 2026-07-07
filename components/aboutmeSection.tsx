@@ -88,6 +88,25 @@ const AboutMeSection = () => {
             </div>
           </div>
         </div>
+        <div>
+          <a className="flex text-primary font-medium gap-2 my-6 items-center hover:gap-4 transition-all">
+            Let's work together
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
