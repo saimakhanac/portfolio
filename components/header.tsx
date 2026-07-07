@@ -74,7 +74,7 @@ export const Header = () => {
           <Link className="block my-4" key={link.href} href={link.href}>
             {link.label}
           </Link>
-        ))}
+        ))} 
         <Button className="dark:bg-primary rounded-full w-full mb-6  px-6 py-5">
           Get in touch
         </Button>

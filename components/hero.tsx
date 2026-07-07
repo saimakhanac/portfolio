@@ -65,7 +65,7 @@ export const Hero = () => {
   }, []);
   return (
     <>
-      <section className="min-h-screen px-8 py-26 ">
+      <section className="min-h-screen px-8 md:py-26 py-16">
         <div className="min-h-screen flex justify-evenly flex-col">
           <div className="flex flex-col-reverse md:flex-row items-center gap-12">
             {/* circle design  */}

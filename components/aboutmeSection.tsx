@@ -28,13 +28,13 @@ const AboutMeSection = () => {
   return (
     <section ref={sectionRef} id="about">
       <div className="max-w-7xl mx-auto px-6 my-10">
-        <div className="grid grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* left */}
           <div
             className={`${isVisible ? "animate-slide-in-left delay-200" : "opacity-0"}`}
           >
             <div className="text-lg text-primary">About Me</div>
-            <div className="font-bold text-foreground text-5xl text-balance my-6">
+            <div className="font-bold text-foreground text-4xl md:text-5xl text-balance my-6">
               Passionate about creating digital experiences
             </div>
             <div className="space-y-3 leading-relaxed text-lg text-muted-foreground">
@@ -72,13 +72,13 @@ const AboutMeSection = () => {
               {cardData.map((card, index) => (
                 <div
                   key={index}
-                  className={`border border-border bg-card rounded-2xl p-8 text-center hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-2 ${isVisible ? `animate-fade-up delay-${(index + 2) * 100}` : "opacity-0"}`}
+                  className={`border border-border bg-card rounded-2xl sm:p-8 p-4 text-center hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-2 ${isVisible ? `animate-fade-up delay-${(index + 2) * 100}` : "opacity-0"}`}
                   style={{ animationDelay: `${(index + 2) * 100}ms` }}
                 >
-                  <div className="text-primary text-5xl font-bold">
+                  <div className="text-primary md:text-5xl text-3xl font-bold">
                     {card.number}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     {card.text}
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div>
-          <a className="flex text-primary font-medium gap-2 my-6 items-center hover:gap-4 transition-all">
+          <a className="flex text-primary font-medium gap-2 my-6 items-center hover:gap-4 transition-all" href="#contact">
             Let's work together
             <svg
               xmlns="http://www.w3.org/2000/svg"
