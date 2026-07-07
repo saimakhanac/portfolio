@@ -131,7 +131,7 @@ const ContactUs = () => {
             {/* head end */}
 
             {/* card */}
-            <div className="bg-card p-7 rounded-2xl my-4">
+            <div className="bg-card p-7 rounded-2xl my-4 select-none">
               <p className="text-lg text-foreground my-2">
                 Ready to bring ideas to life?
               </p>
@@ -151,7 +151,7 @@ const ContactUs = () => {
           >
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="email" className="block mb-2">
+                <label htmlFor="name" className="block mb-2">
                   Name
                 </label>
                 <input
@@ -160,7 +160,7 @@ const ContactUs = () => {
                     setFormState({ ...formState, name: e.target.value });
                   }}
                   type="text"
-                  id="email"
+                  id="name"
                   required
                   placeholder="Your Name"
                   className="text-sm mb-4 font-medium text-foreground bg-card px-4 py-5 w-full border border-border rounded-2xl placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -168,7 +168,7 @@ const ContactUs = () => {
               </div>
               {/*  */}
               <div>
-                <label htmlFor="name" className="block mb-2">
+                <label htmlFor="email" className="block mb-2">
                   Email
                 </label>
                 <input
@@ -177,7 +177,7 @@ const ContactUs = () => {
                     setFormState({ ...formState, email: e.target.value });
                   }}
                   type="email"
-                  id="name"
+                  id="email"
                   required
                   placeholder="your@email.com"
                   className="text-sm mb-4 font-medium text-foreground bg-card px-4 py-5 w-full border border-border rounded-2xl placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -185,7 +185,7 @@ const ContactUs = () => {
               </div>
               {/*  */}
               <div>
-                <label htmlFor="name" className="block mb-2">
+                <label htmlFor="message" className="block mb-2">
                   Message
                 </label>
                 <textarea
