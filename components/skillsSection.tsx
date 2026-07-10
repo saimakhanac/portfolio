@@ -148,7 +148,7 @@ const SkillsSection = () => {
             </div>
           </div>
           {/* box */}
-          <div className="grid grid-cols-3 gap-8 my-16">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-8 my-16">
             {skillCategories.map((category, categoryIndex) => (
               <div className="bg-card rounded-xl p-8 mx-4" key={categoryIndex}>
                 <p>{category.title}</p>
@@ -178,12 +178,12 @@ const SkillsSection = () => {
             </div>
           </div>
 
-          <div className="lg:grid grid-cols-2 gap-6 my-6">
+          <div className="lg:grid grid-cols-2 gap-6 my-6 lg:mx-0 mx-4">
             {techStack.map((list, index) => {
               const TitleIcon = list.icon;
               return (
                 <div
-                  className="bg-card p-6 rounded-md border border-border hover:border-primary/10"
+                  className="bg-card p-6 rounded-md border border-border hover:border-primary/10 lg:my-0 md:my-4 my-6"
                   key={index}
                 >
                   <div className="flex gap-4 items-center">
@@ -194,7 +194,7 @@ const SkillsSection = () => {
                       {list.title}
                     </div>
                   </div>
-                
+
                   {/* chip */}
                   <div className="flex flex-wrap gap-2 my-2">
                     {list.items.map((item, index) => {
