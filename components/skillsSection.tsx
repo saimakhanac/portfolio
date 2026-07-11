@@ -7,7 +7,7 @@ import {
   SiDocker,
   SiFigma,
   SiGit,
-  SiGraphql,
+  SiFirebase,
   SiJavascript,
   SiJest,
   SiMongodb,
@@ -23,6 +23,7 @@ import {
   SiVercel,
   SiVuedotjs,
   SiWebpack,
+  SiMaterialdesign,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
@@ -34,23 +35,23 @@ const skillCategories = [
       { name: "React / Next.js", level: 95 },
       { name: "TypeScript", level: 90 },
       { name: "Tailwind CSS", level: 95 },
-      { name: "Vue.js", level: 80 },
+      { name: "Material UI / Shadcn", level: 85 },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Python", level: 75 },
-      { name: "PostgresSQL", level: 85 },
-      { name: "GraphQL", level: 80 },
+      { name: "Node.js", level: 70 },
+      { name: "Python", level: 65 },
+      { name: "PostgresSQL", level: 55 },
+      { name: "Firebase", level: 80 },
     ],
   },
   {
     title: "Tools & Others",
     skills: [
       { name: "Git/GitHub", level: 90 },
-      { name: "Docker", level: 75 },
+      { name: "Docker", level: 45 },
       { name: "Figma", level: 85 },
       { name: "AWS/Vercel", level: 80 },
     ],
@@ -65,12 +66,12 @@ const techStack = [
   {
     title: "Frameworks",
     icon: Layers,
-    items: ["React", "Next.js", "Vue.js", "Node.js"],
+    items: ["React", "Next.js", "Vue.js", "Node.js", "Material UI"],
   },
   {
     title: "Libraries",
     icon: LibraryIcon,
-    items: ["Tailwind CSS", "GraphQL", "REST APIs", "Sass", "Jest", "Cypress"],
+    items: ["Tailwind CSS", "Firebase", "REST APIs", "Sass", "Jest", "Cypress"],
   },
   {
     title: "Packages & Tools",
@@ -97,7 +98,7 @@ const techIcon: Record<string, IconType> = {
   "Vue.js": SiVuedotjs,
   "Node.js": SiNodedotjs,
   "Tailwind CSS": SiTailwindcss,
-  GraphQL: SiGraphql ,
+  Firebase: SiFirebase,
   "REST APIs": TbApi,
   Sass: SiSass,
   Jest: SiJest,
@@ -108,9 +109,10 @@ const techIcon: Record<string, IconType> = {
   Docker: SiDocker,
   Vercel: SiVercel,
   Figma: SiFigma,
-  StoryBook: SiStorybook ,
+  StoryBook: SiStorybook,
   Webpack: SiWebpack,
   AWS: FaAws,
+  "Material UI": SiMaterialdesign,
 };
 
 const SkillsSection = () => {
@@ -134,7 +136,9 @@ const SkillsSection = () => {
     <>
       <section id="skills" ref={sectionRef} className="py-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center px-6 lg:px-10 max-w-3xl mx-auto">
+          <div
+            className={`text-center px-6 lg:px-10 max-w-3xl mx-auto ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+          >
             <div className="text-sm text-primary uppercase my-4">
               {" "}
               Skills & Expertise{" "}
@@ -150,7 +154,10 @@ const SkillsSection = () => {
           {/* box */}
           <div className="grid md:grid-cols-3 grid-cols-1 gap-8 my-16">
             {skillCategories.map((category, categoryIndex) => (
-              <div className="bg-card rounded-xl p-8 mx-4" key={categoryIndex}>
+              <div
+                className={`bg-card rounded-xl p-8 mx-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+                key={categoryIndex}
+              >
                 <p>{category.title}</p>
                 {category.skills.map((skill, skillIndex) => (
                   <div className="my-6" key={skillIndex}>
@@ -183,7 +190,7 @@ const SkillsSection = () => {
               const TitleIcon = list.icon;
               return (
                 <div
-                  className="bg-card p-6 rounded-md border border-border hover:border-primary/10 lg:my-0 md:my-4 my-6"
+                  className={`bg-card p-6 rounded-md border border-border hover:border-primary/10 lg:my-0 md:my-4 my-6 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
                   key={index}
                 >
                   <div className="flex gap-4 items-center">

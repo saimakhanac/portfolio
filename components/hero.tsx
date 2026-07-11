@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { ArrowDown, Mail, Phone, Calendar, } from "lucide-react";
+import { ArrowDown, Mail, Phone, Calendar } from "lucide-react";
 import Link from "next/link";
 const techstack = ["React", "TypeScript", "Next.js", "Tailwind"];
 const roles = [
@@ -69,10 +69,10 @@ export const Hero = () => {
         <div className="min-h-screen flex justify-evenly flex-col">
           <div className="flex flex-col-reverse md:flex-row items-center gap-12">
             {/* circle design  */}
-            <div className="">
+            <div className={`${isVisible ? "animate-fade-up" : "opacity-0"}`}>
               <div className="relative overflow-hidden rounded-full border-4 border-primary w-56 h-56 shadow-lg">
                 <div className="flex flex-col items-center justify-center w-full h-full z-100">
-                  <span className="text-6xl font-bold text-primary">5+</span>
+                  <span className="text-6xl font-bold text-primary">2+</span>
                   <span className="text-muted-foreground">
                     years experience
                   </span>
@@ -95,7 +95,7 @@ export const Hero = () => {
             {/* circle ends here */}
 
             {/* Info */}
-            <div>
+            <div className={`${isVisible ? "animate-fade-up" : "opacity-0"}`}>
               <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight">
                 Saima Khan
               </div>
@@ -162,7 +162,10 @@ export const Hero = () => {
           </div>
           {/* Scroll down */}
           <div className="mt-6 sm:mt-0 flex justify-center animate-bounce">
-            <Link href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link
+              href="#about"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <ArrowDown size={30} />
             </Link>
           </div>
